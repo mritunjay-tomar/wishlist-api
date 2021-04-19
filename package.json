@@ -1,0 +1,18 @@
+{
+  "name": "wishlist-api",
+  "version": "1.0.0",
+  "description": "demonstration of how an API can be made using express.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "Mritunjay Tomar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.12.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
