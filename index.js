@@ -5,7 +5,7 @@ const Wishlist = require("./db/models/Wishlist")
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(express.json()); // This is used to recodnize that request object is a JSON object
+app.use(express.json()); // This is used to recognize that request object is a JSON object
 
 app.post("/SaveWishlist", (req, res) => {
     const wish = new Wishlist(req.body)
@@ -27,12 +27,11 @@ app.get("/", async(req, res) => {
 
 app.patch("/UpdateWishlist/:id", async (req, res) => {
     try {
-        const _id = req.params.id
-        console.log("Update")
-        const UpdateRequest = Wishlist.findByIdAndUpdate({_id : _id}, req.body, {new: true})
-        res.send(UpdateRequest);
+        const id = req.params.id
+        const UpdateRequest = Wishlist.findByIdAndUpdate(id, req.body)
+        console.log(UpdateRequest);
+        res.send(request);
     } catch(e) {
-        console.log(e);
         res.status(404).send(e);
     }
 })

@@ -7,8 +7,7 @@ mongoose.connect(
         useNewUrlParser: true,
         useUnifiedTopology: true
     }
-).then( () => {
-}).catch( (err) => {
+).catch( (err) => {
     if (err) {
         console.log(err)
     }
